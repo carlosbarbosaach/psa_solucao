@@ -1,0 +1,28 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5rem 0;
+  padding: 40px 24px 20px;
+  .Title_parceiro {
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 2.75rem;
+      text-align: center;
+    }
+  }
+}
+
+.container_slider {
+  width: 100%;
+
+  @include breakpoint(md) {
+    max-width: 250px;
+    width: 100%;
+  }
+}

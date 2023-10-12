@@ -9,6 +9,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Categorias from "./Categorias";
 import Departamentos from "./Departamentos";
 import QuemSomos from "./quemSomos/QuemSomos";
+import Parceiros from "./parceiros/Parceiros";
 
 const Home = () => {
   const [slidesPerView, setSlidePerView] = useState(2);
@@ -57,6 +58,7 @@ const Home = () => {
       <Categorias />
       <Departamentos />
       <QuemSomos />
+      <Parceiros />
     </>
   );
 };

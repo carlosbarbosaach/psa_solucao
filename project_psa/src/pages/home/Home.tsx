@@ -2,6 +2,10 @@ import { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import dataImg from "../../typescript/imagens";
 import styles from "./Home.module.scss";
+import "swiper/css/pagination";
+// import required modules
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import Categorias from "./Categorias";
 
 const Home = () => {
   const [slidesPerView, setSlidePerView] = useState(2);
@@ -22,23 +26,33 @@ const Home = () => {
   }, []);
 
   return (
-    <div className={styles.container}>
-      <Swiper
-        slidesPerView={slidesPerView}
-        pagination={{ clickable: true }}
-        navigation
-      >
-        {dataImg.map((itemSlider) => (
-          <SwiperSlide key={itemSlider.id}>
-            <img
-              className={styles.SwiperSlider_img}
-              src={itemSlider.image}
-              alt="Image Slider"
-            />
-          </SwiperSlide>
-        ))}
-      </Swiper>
-    </div>
+    <>
+      <div className={styles.container}>
+        <Swiper
+          className={styles.mySwiper}
+          slidesPerView={slidesPerView}
+          spaceBetween={10}
+          centeredSlides={true}
+          modules={[Autoplay, Pagination, Navigation]}
+          autoplay={{
+            delay: 2500,
+            disableOnInteraction: false,
+          }}
+          navigation={true}
+        >
+          {dataImg.map((itemSlider) => (
+            <SwiperSlide key={itemSlider.id}>
+              <img
+                className={styles.SwiperSlider_img}
+                src={itemSlider.image}
+                alt="Image Slider"
+              />
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
+      <Categorias />
+    </>
   );
 };
 

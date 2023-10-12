@@ -1,0 +1,65 @@
+@import "../../../styles/variables.scss";
+
+.container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2.5rem 0;
+  padding: 40px 24px 20px;
+}
+
+.infoQuemSomos {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+
+  @include breakpoint(md1024) {
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 60px 48px 20px;
+    gap: 40px;
+  }
+
+  &_text {
+    h1 {
+      font-size: 36px;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      margin-bottom: 2.75rem;
+      text-align: center;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 400;
+
+      @include breakpoint(md) {
+        max-width: 720px;
+        width: 100%;
+      }
+    }
+  }
+  .text_highlight {
+    color: $colorOrange;
+    font-weight: 700;
+    font-size: 18px;
+  }
+
+  .text_highlightBlack {
+    color: $colorDark;
+    font-weight: 600;
+    font-style: italic;
+  }
+}
+
+.container_video {
+  display: flex;
+
+  .video_iframe {
+    border: 0;
+  }
+}

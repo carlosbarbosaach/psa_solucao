@@ -3,9 +3,12 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import dataImg from "../../typescript/imagens";
 import styles from "./Home.module.scss";
 import "swiper/css/pagination";
+
 // import required modules
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import Categorias from "./Categorias";
+import Departamentos from "./Departamentos";
+import QuemSomos from "./quemSomos/QuemSomos";
 
 const Home = () => {
   const [slidesPerView, setSlidePerView] = useState(2);
@@ -52,6 +55,8 @@ const Home = () => {
         </Swiper>
       </div>
       <Categorias />
+      <Departamentos />
+      <QuemSomos />
     </>
   );
 };

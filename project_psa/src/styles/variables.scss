@@ -6,7 +6,7 @@ $Poppins: "Poppins", sans-serif;
 $colorDark: #252525;
 $colorGray: #343a40;
 $colorWhite: #ffffff;
-$colorBground: #f1f4f7;
+$colorBground: #f8f9fa;
 $colorOrange: #f05736;
 $colorYellow: #ffc107;
 $colorBlue: #007bff;
@@ -25,6 +25,12 @@ $headerHeight: 100px;
   @if $point == md {
     //  Responsive 768px
     @media (min-width: 48rem) {
+      @content;
+    }
+  }
+  @if $point == md1024 {
+    //  Responsive 1200px
+    @media (min-width: 75rem) {
       @content;
     }
   }

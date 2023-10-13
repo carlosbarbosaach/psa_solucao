@@ -5,15 +5,67 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  margin: 2.5rem 0;
+  margin: 0;
   padding: 40px 24px 20px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: auto;
+  background: linear-gradient(186deg, #00263c, #00263c, #f05736);
+  background-size: 600% 600%;
+
+  -webkit-animation: AnimationName 59s ease infinite;
+  -moz-animation: AnimationName 59s ease infinite;
+  animation: AnimationName 59s ease infinite;
+
+  @-webkit-keyframes AnimationName {
+    0% {
+      background-position: 0% 13%;
+    }
+    50% {
+      background-position: 100% 88%;
+    }
+    100% {
+      background-position: 0% 13%;
+    }
+  }
+  @-moz-keyframes AnimationName {
+    0% {
+      background-position: 0% 13%;
+    }
+    50% {
+      background-position: 100% 88%;
+    }
+    100% {
+      background-position: 0% 13%;
+    }
+  }
+  @keyframes AnimationName {
+    0% {
+      background-position: 0% 13%;
+    }
+    50% {
+      background-position: 100% 88%;
+    }
+    100% {
+      background-position: 0% 13%;
+    }
+  }
+
   .Title_contato {
     h1 {
-      font-size: 36px;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: 700;
       letter-spacing: 0.3px;
-      margin-bottom: 2.75rem;
+      margin-bottom: 60px;
       text-align: center;
+      color: $colorWhite;
+      line-height: 120%;
+
+      @include breakpoint(md) {
+        font-size: 38px;
+      }
     }
   }
 }

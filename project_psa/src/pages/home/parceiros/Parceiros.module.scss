@@ -3,26 +3,208 @@
 .container {
   align-items: center;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin: 2.5rem 0;
-  padding: 40px 24px 20px;
+  margin: 40px 0 0;
+  padding: 80px 24px;
+  background-color: #00263c;
+
+  @include breakpoint(md) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+
+    @include breakpoint(md) {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      max-width: 682px;
+    }
+  }
+
   .Title_parceiro {
     h1 {
-      font-size: 36px;
-      font-weight: 600;
+      font-size: 24px;
+      font-weight: 700;
       letter-spacing: 0.3px;
-      margin-bottom: 2.75rem;
+      margin-bottom: 60px;
       text-align: center;
+      color: $colorWhite;
+      line-height: 120%;
+
+      @include breakpoint(md) {
+        font-size: 38px;
+      }
     }
   }
 }
 
 .container_slider {
   width: 100%;
+  display: flex;
 
-  @include breakpoint(md) {
-    max-width: 250px;
-    width: 100%;
+  // PREV
+  [class~="swiper-button-prev"] {
+    background-color: #fafafa;
+    height: 22px;
+    width: 22px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.161);
+    border-radius: 100%;
+    display: flex;
+    padding: 0 0 0 1px;
+    transform: rotate(180deg);
+
+    @include breakpoint(md) {
+      height: 36px;
+      width: 36px;
+    }
   }
+
+  [class~="swiper-button-prev"]:after {
+    position: relative;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border: 3px solid $colorBlue;
+    border-bottom: 0;
+    border-left: 0;
+    margin: auto;
+    padding: 0;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    transform-origin: center;
+    transform: rotate(45deg) translate(-15%, 15%);
+
+    @include breakpoint(md) {
+      height: 8px;
+      width: 8px;
+    }
+  }
+  // FIM PREV
+
+  // NEXT
+  [class~="swiper-button-next"] {
+    background-color: #fafafa;
+    height: 22px;
+    width: 22px;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.161);
+    border-radius: 100%;
+    display: flex;
+    padding: 0 0 0 1px;
+    transform: rotate(180deg);
+
+    @include breakpoint(md) {
+      height: 36px;
+      width: 36px;
+    }
+  }
+
+  [class~="swiper-button-next"]:after {
+    position: relative;
+    display: block;
+    content: "";
+    height: 6px;
+    width: 6px;
+    border: 3px solid $colorBlue;
+    border-bottom: 0;
+    border-left: 0;
+    margin: auto;
+    padding: 0;
+    left: unset;
+    right: unset;
+    top: unset;
+    bottom: unset;
+    transform-origin: center;
+    transform: rotate(226deg) translate(-15%, 15%);
+
+    @include breakpoint(md) {
+      height: 8px;
+      width: 8px;
+    }
+  }
+  // FIM NEXT
+
+  .SwiperSlide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    h2 {
+      font-size: 24px;
+      color: #212529;
+      text-align: center;
+      margin: 30px 0 3px;
+      font-size: 1.25rem;
+      line-height: 140%;
+      font-weight: 700;
+
+      @include breakpoint(md) {
+        font-size: 30px;
+      }
+    }
+
+    h3 {
+      font-size: 12px;
+      font-weight: 400;
+      color: #212529;
+      line-height: 120%;
+      margin-bottom: 20px;
+
+      @include breakpoint(md) {
+        font-size: 14px;
+      }
+    }
+
+    .imgParceiro {
+      width: 190px;
+      height: 75px;
+
+      @include breakpoint(md) {
+        width: 230px;
+        height: 95px;
+      }
+    }
+
+    .btn_more {
+      padding: 10px 40px;
+      border: 1px solid $colorBlue;
+      color: $colorBlue;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 1px;
+      margin: 0 10px;
+      transition: 0.2s ease;
+
+      &:hover {
+        color: #fff;
+        background-color: $colorBlue;
+      }
+    }
+  }
+}
+
+.container_cardSlider {
+  padding: 40px 24px;
+  margin-left: -22px;
+  margin-right: -22px;
+  width: 100%;
+  min-width: 100%;
+  background-color: #fff;
+  border-radius: 20px;
+  min-height: 100px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }

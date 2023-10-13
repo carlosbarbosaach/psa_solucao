@@ -1,41 +1,57 @@
-import { Carousel } from "react-responsive-carousel";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
 import styles from "./Parceiros.module.scss";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css/pagination";
+import "swiper/css";
 import parceirosData from "../../../typescript/parceirosData";
 
-type parceirosData = {
-  id: string;
-  image: string;
-};
+import { Autoplay, Pagination, Navigation, Virtual } from "swiper/modules";
 
 const Parceiros = () => {
-  const isMobile = window.innerWidth <= 786;
-
   return (
     <>
       <div className={styles.container}>
-        <div className={styles.Title_parceiro}>
-          <h1>Parceiros</h1>
-        </div>
-        <div className={styles.container_slider}>
-          <Carousel
-            showArrows={false}
-            showStatus={false}
-            showIndicators={false}
-            showThumbs={!isMobile}
-            autoPlay
-            infiniteLoop
-          >
-            {parceirosData.map((itemParceiro) => (
-              <div key={itemParceiro.id}>
-                <img
-                  className={styles.ParceirosSlider_img}
-                  src={itemParceiro.image}
-                  alt="Image Slider"
-                />
-              </div>
-            ))}
-          </Carousel>
+        <div className={styles.container_content}>
+          <div className={styles.Title_parceiro}>
+            <h1>Veja quem são nossos Parceiros</h1>
+          </div>
+
+          <div className={styles.container_cardSlider}>
+            <div className={styles.container_slider}>
+              <Swiper
+                modules={[Autoplay, Pagination, Navigation, Virtual]}
+                className={styles.mySwiper}
+                virtual
+                slidesPerView={1}
+                spaceBetween={50}
+                centeredSlides={true}
+                autoplay={{
+                  delay: 2700,
+                  disableOnInteraction: false,
+                }}
+                navigation={true}
+              >
+                {parceirosData.map((itemParceiro) => (
+                  <SwiperSlide
+                    className={styles.SwiperSlide}
+                    key={itemParceiro.id}
+                  >
+                    <img
+                      className={styles.imgParceiro}
+                      src={itemParceiro.image}
+                      alt="Marcas Parceiras"
+                      width={120}
+                      height={30}
+                    />
+                    <h2>{itemParceiro.brandName}</h2>
+                    <h3>{itemParceiro.subName}</h3>
+                    <a className={styles.btn_more} href={itemParceiro.link}>
+                      Saiba Mais
+                    </a>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+          </div>
         </div>
       </div>
     </>

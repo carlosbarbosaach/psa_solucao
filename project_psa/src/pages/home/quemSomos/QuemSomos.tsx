@@ -1,4 +1,5 @@
 import styles from "./QuemSomos.module.scss";
+import PSALogo from "../../../assets/Logomarca_PSA.png";
 
 const QuemSomos = () => {
   return (
@@ -58,6 +59,13 @@ const QuemSomos = () => {
             </p>
           </div>
           <div className={styles.container_video}>
+            <img
+              className={styles.psaLogoStyle}
+              src={PSALogo}
+              alt="PSA Logo"
+              width={315}
+              height={175}
+            />
             <iframe
               className={styles.video_iframe}
               width="380"

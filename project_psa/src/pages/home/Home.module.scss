@@ -1,7 +1,9 @@
 @import "../../styles/variables.scss";
 
 .container {
-  padding: 0 1.5rem;
+  padding: 7.75rem 1.5rem;
+  background-image: url("../../assets/bg-masthead.png");
+  background-size: cover;
 
   // SLIDER ARROW PREV
 
@@ -14,6 +16,11 @@
     display: flex;
     padding: 0 0 0 1px;
     transform: rotate(180deg);
+
+    @include breakpoint(md) {
+      height: 36px;
+      width: 36px;
+    }
   }
 
   [class~="swiper-button-prev"]:after {
@@ -22,7 +29,7 @@
     content: "";
     height: 6px;
     width: 6px;
-    border: 3px solid #00b4f0;
+    border: 3px solid $colorBlue;
     border-bottom: 0;
     border-left: 0;
     margin: auto;
@@ -33,6 +40,11 @@
     bottom: unset;
     transform-origin: center;
     transform: rotate(45deg) translate(-15%, 15%);
+
+    @include breakpoint(md) {
+      height: 8px;
+      width: 8px;
+    }
   }
 
   // SLIDER ARROW NEXT
@@ -46,6 +58,11 @@
     display: flex;
     padding: 0 0 0 1px;
     transform: rotate(180deg);
+
+    @include breakpoint(md) {
+      height: 36px;
+      width: 36px;
+    }
   }
 
   [class~="swiper-button-next"]:after {
@@ -54,7 +71,7 @@
     content: "";
     height: 6px;
     width: 6px;
-    border: 3px solid #00b4f0;
+    border: 3px solid $colorBlue;
     border-bottom: 0;
     border-left: 0;
     margin: auto;
@@ -65,6 +82,11 @@
     bottom: unset;
     transform-origin: center;
     transform: rotate(226deg) translate(-15%, 15%);
+
+    @include breakpoint(md) {
+      height: 8px;
+      width: 8px;
+    }
   }
 }
 
@@ -76,8 +98,4 @@
     height: 300px;
     object-fit: contain;
   }
-}
-
-.mySwiper {
-  --swiper-navigation-size: 24px;
 }

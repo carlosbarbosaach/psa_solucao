@@ -77,6 +77,10 @@
           }
         }
         a {
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 100%;
+          letter-spacing: 1px;
           text-decoration: none;
           color: inherit;
           padding: 0.75rem 1rem;
@@ -92,22 +96,24 @@
     }
 
     button {
-      cursor: pointer;
-      outline: none;
-      padding: 0.6rem 1rem;
-      border-radius: $borderRadius;
-      font-size: 1rem;
-      font-weight: 600;
-      background: transparent;
+      padding: 10px 40px;
       border: 1px solid $colorBlue;
       color: $colorBlue;
-      transition: 0.3s ease all;
+      background: transparent;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 1px;
+      margin: 0 10px;
+      transition: 0.2s ease;
 
       &:hover {
-        background: $colorBlue;
-        color: $colorWhite;
+        color: #fff;
+        background-color: $colorBlue;
       }
     }
+
     &.isMenu {
       transform: translate(100%);
     }

@@ -60,7 +60,7 @@ const QuemSomos = () => {
           <div className={styles.container_video}>
             <iframe
               className={styles.video_iframe}
-              width="560"
+              width="380"
               height="315"
               src="https://www.psa.com.br/static/PSA9.mp4"
               title="Vídeo da Empresa"

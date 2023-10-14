@@ -6,6 +6,8 @@
   margin: 40px 0 0;
   padding: 80px 24px;
   background-color: #00263c;
+  border-bottom: 5px solid #f05736;
+  border-top: 5px solid #f05736;
 
   @include breakpoint(md) {
     display: flex;
@@ -166,12 +168,12 @@
     }
 
     .imgParceiro {
-      width: 190px;
-      height: 75px;
+      width: 160px;
+      height: 55px;
 
       @include breakpoint(md) {
         width: 230px;
-        height: 95px;
+        height: 80px;
       }
     }
 

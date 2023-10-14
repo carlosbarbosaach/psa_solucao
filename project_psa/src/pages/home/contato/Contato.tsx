@@ -23,38 +23,45 @@ const Contato = () => {
           <h1>Contato</h1>
         </div>
         <form className={styles.contact_form} onSubmit={handleSubmit}>
-          <div className="form-group">
-            <label>Nome Completo:</label>
+          <div className={styles.form_group}>
+            <label></label>
             <input
               type="text"
               value={name}
               onChange={(e) => setName(e.target.value)}
+              placeholder="Nome*"
             />
           </div>
           <div className={styles.form_group}>
-            <label>Telefone:</label>
+            <label></label>
             <input
               type="tel"
               value={phone}
               onChange={(e) => setPhone(e.target.value)}
+              placeholder="Telefone*"
             />
           </div>
           <div className={styles.form_group}>
-            <label>Email:</label>
+            <label></label>
             <input
               type="email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
+              placeholder="Email*"
             />
           </div>
           <div className={styles.form_group}>
-            <label>Mensagem:</label>
+            <label></label>
             <textarea
+              className={styles.textarea}
               value={message}
               onChange={(e) => setMessage(e.target.value)}
+              placeholder="Mensagem*"
             />
           </div>
-          <button type="submit">Enviar</button>
+          <div className={styles.container_btn}>
+            <button type="submit">Enviar</button>
+          </div>
         </form>
       </div>
     </>

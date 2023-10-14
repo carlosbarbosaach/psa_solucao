@@ -11,6 +11,7 @@ import Departamentos from "./Departamentos";
 import QuemSomos from "./quemSomos/QuemSomos";
 import Parceiros from "./parceiros/Parceiros";
 import Contato from "./contato/Contato";
+import Footer from "../footer/Footer";
 
 const Home = () => {
   const [slidesPerView, setSlidePerView] = useState(2);
@@ -61,6 +62,7 @@ const Home = () => {
       <QuemSomos />
       <Parceiros />
       <Contato />
+      <Footer />
     </>
   );
 };

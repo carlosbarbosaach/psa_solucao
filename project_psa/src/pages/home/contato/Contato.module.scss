@@ -7,60 +7,16 @@
   justify-content: center;
   margin: 0;
   padding: 40px 24px 20px;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
-  width: 100%;
-  height: auto;
-  background: linear-gradient(186deg, #00263c, #00263c, #f05736);
-  background-size: 600% 600%;
-
-  -webkit-animation: AnimationName 59s ease infinite;
-  -moz-animation: AnimationName 59s ease infinite;
-  animation: AnimationName 59s ease infinite;
-
-  @-webkit-keyframes AnimationName {
-    0% {
-      background-position: 0% 13%;
-    }
-    50% {
-      background-position: 100% 88%;
-    }
-    100% {
-      background-position: 0% 13%;
-    }
-  }
-  @-moz-keyframes AnimationName {
-    0% {
-      background-position: 0% 13%;
-    }
-    50% {
-      background-position: 100% 88%;
-    }
-    100% {
-      background-position: 0% 13%;
-    }
-  }
-  @keyframes AnimationName {
-    0% {
-      background-position: 0% 13%;
-    }
-    50% {
-      background-position: 100% 88%;
-    }
-    100% {
-      background-position: 0% 13%;
-    }
-  }
+  background-color: #f8f9fa;
 
   .Title_contato {
     h1 {
       font-size: 24px;
       font-weight: 700;
       letter-spacing: 0.3px;
-      margin-bottom: 60px;
+      margin-bottom: 40px;
       text-align: center;
-      color: $colorWhite;
+      color: $colorDark;
       line-height: 120%;
 
       @include breakpoint(md) {
@@ -72,48 +28,45 @@
 
 .contact_form {
   max-width: 400px;
+  width: 100%;
   margin: 0 auto;
   padding: 20px;
-  border: 1px solid #ccc;
   border-radius: 8px;
-  background-color: #f5f5f5;
 
-  .form-group {
-    margin-bottom: 20px;
+  .container_btn {
+    display: flex;
+    justify-content: end;
 
-    label {
-      display: block;
-      font-weight: bold;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 10px;
-      border: 1px solid #aaa;
-      border-radius: 4px;
-      background-color: #fff;
-      transition: border-color 0.2s;
-
-      &:focus {
-        border-color: #007bff;
-        outline: none;
-      }
+    button {
+      padding: 10px 40px;
+      border: 1px solid #007bff;
+      color: #007bff;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 1px;
+      margin: 0 10px;
+      transition: 0.2s ease;
     }
   }
+}
 
-  button {
-    background-color: #007bff;
-    color: #fff;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: bold;
-    transition: background-color 0.2s;
+.form_group {
+  input,
+  .textarea {
+    font-size: 0.75rem;
+    width: 100%;
+    border: unset;
+    border-radius: 18px;
+    margin-bottom: 0.625rem;
+    min-height: 40px;
+    font-weight: 300;
+    padding-left: 20px;
 
-    &:hover {
-      background-color: #0056b3;
+    &:focus {
+      border-color: #007bff;
+      outline: none;
     }
   }
 }

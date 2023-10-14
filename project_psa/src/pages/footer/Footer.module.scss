@@ -1,0 +1,43 @@
+@import "../../styles//variables.scss";
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 0;
+  padding: 40px 24px 20px;
+
+  .content_quemsomos {
+    margin: 0 0 30px;
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+        }
+      }
+    }
+  }
+
+  .forma_de_pagamento {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    ul {
+      padding: 0;
+      li {
+        list-style: none;
+        a {
+        }
+      }
+    }
+    .Icon {
+      margin-bottom: 0.5rem;
+      width: 44px;
+      height: 44px;
+      color: #007bff;
+      transition: 300ms all;
+    }
+  }
+}

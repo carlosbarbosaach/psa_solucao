@@ -121,6 +121,10 @@
         text-align: center;
         text-transform: none;
         margin: 0;
+
+        @include breakpoint(md) {
+          text-align: left;
+        }
       }
       p {
         color: #7b7b7b;
@@ -130,6 +134,10 @@
         text-align: center;
         text-transform: none;
         margin: 0;
+
+        @include breakpoint(md) {
+          text-align: left;
+        }
       }
       .telContato {
         ul {
@@ -143,6 +151,10 @@
           display: flex;
           justify-content: center;
           gap: 10px;
+
+          @include breakpoint(md) {
+            justify-content: left;
+          }
         }
         a {
           text-decoration: none;
@@ -151,7 +163,6 @@
           font-weight: 400;
           letter-spacing: 0.05em;
           text-align: center;
-
           &:hover {
             color: $colorGray;
           }

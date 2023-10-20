@@ -1,0 +1,29 @@
+@import "../../styles//variables.scss";
+
+.floating_button {
+  position: fixed;
+  bottom: 40px;
+  right: 25px;
+  background-color: #f5f5f5;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  text-align: center;
+  line-height: 60px;
+  cursor: pointer;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  z-index: 100;
+
+  .img_whatsapp {
+    width: 50px;
+    height: 50px;
+    transition: 0.6s;
+
+    &:hover {
+      transform: scale(1.25);
+    }
+  }
+}

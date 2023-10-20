@@ -8,36 +8,155 @@
   padding: 40px 24px 20px;
 
   .content_quemsomos {
-    margin: 0 0 30px;
+    margin: 0 0 10px;
+
+    @include breakpoint(md) {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
     ul {
       padding: 0;
       li {
         list-style: none;
+        margin: 0 0 10px;
+        @include breakpoint(md) {
+          @include breakpoint(md) {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin: 0 0 40px;
+          }
+        }
         a {
+          color: $colorDark;
+          font-size: 16px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 0.875rem;
+          letter-spacing: 0.05em;
+          text-align: left;
+          text-decoration: none;
+
+          &:hover {
+            color: $colorOrange;
+          }
         }
       }
     }
   }
 
-  .forma_de_pagamento {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  .rede_social {
+    margin: 0 0 30px;
+    @include breakpoint(md) {
+      align-items: center;
+      justify-content: center;
+      display: flex;
+    }
 
     ul {
       padding: 0;
       li {
+        margin-bottom: 10px;
         list-style: none;
+
+        @include breakpoint(md) {
+          align-items: center;
+          justify-content: center;
+          display: flex;
+          margin-bottom: 20px;
+        }
         a {
+          color: $colorDark;
+          font-size: 16px;
+          font-size: 0.875rem;
+          font-weight: 600;
+          line-height: 0.875rem;
+          letter-spacing: 0.05em;
+          text-align: left;
+          text-decoration: none;
         }
       }
     }
-    .Icon {
-      margin-bottom: 0.5rem;
-      width: 44px;
-      height: 44px;
-      color: #007bff;
-      transition: 300ms all;
+
+    .redeSocial_icons {
+      display: flex;
+      gap: 15px;
+
+      img {
+        transition: 0.3s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.13);
+        }
+      }
+    }
+  }
+
+  .content_matriz__filial {
+    border-top: 1px solid #d9d9d9;
+    padding: 30px 0;
+
+    @include breakpoint(md) {
+      flex-direction: row;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .content_matriz,
+    .content_filial {
+      margin-bottom: 40px;
+
+      @include breakpoint(md) {
+        margin: 0;
+      }
+
+      h3 {
+        text-align: center;
+        color: $colorDark;
+        font-size: 14px;
+        font-weight: 700;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: none;
+        margin: 0;
+      }
+      p {
+        color: #7b7b7b;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 0.05em;
+        text-align: center;
+        text-transform: none;
+        margin: 0;
+      }
+      .telContato {
+        ul {
+          list-style: none;
+          padding: 0;
+        }
+        li {
+          margin: 5px 0;
+          list-style: none;
+          align-items: center;
+          display: flex;
+          justify-content: center;
+          gap: 10px;
+        }
+        a {
+          text-decoration: none;
+          color: #7b7b7b;
+          font-size: 12px;
+          font-weight: 400;
+          letter-spacing: 0.05em;
+          text-align: center;
+
+          &:hover {
+            color: $colorGray;
+          }
+        }
+      }
     }
   }
 }

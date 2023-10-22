@@ -4,6 +4,7 @@ import { BiMenuAltRight } from "react-icons/bi";
 import { AiOutlineClose } from "react-icons/ai";
 import styles from "./Header.module.scss";
 import LogoPSA from "../../assets/Logomarca_PSA.png";
+import SubMenu from "../submenu/SubMenu";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -12,6 +13,11 @@ const Header = () => {
     width: window.innerWidth,
     height: window.innerHeight,
   });
+
+  const submenuItems = [
+    { label: "Submenu 1", to: "/vendas/submenu1" },
+    { label: "Submenu 2", to: "/vendas/submenu2" },
+  ];
 
   const handleSuportClick = () => {
     navigate("/suporte");
@@ -57,6 +63,7 @@ const Header = () => {
           <ul>
             <li>
               <a href="/vendas">Vendas</a>
+              {menuOpen && size.width < 768 && <SubMenu items={submenuItems} />}
             </li>
             <li>
               <a href="/locacao">Locação</a>
@@ -76,8 +83,11 @@ const Header = () => {
             <li>
               <a href="/contato">Contato</a>
             </li>
+            <li>
+              <button onClick={handleSuportClick}>Suporte</button>
+            </li>
           </ul>
-          <button onClick={handleSuportClick}>Suporte</button>
+          {/* <button onClick={handleSuportClick}>Suporte</button> */}
         </nav>
         <div className={styles.header_ContentToggle}>
           {!menuOpen ? (

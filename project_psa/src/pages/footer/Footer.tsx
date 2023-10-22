@@ -48,8 +48,12 @@ const Footer = () => {
             <div className={styles.telContato}>
               <ul>
                 <li>
-                  <a href="tel:+5548998117717">(48)3952-0900</a>
-                  <a href="tel:+5548998117717">(48)98405-9864</a>
+                  <a className={styles.tel_icon} href="tel:+5548998117717">
+                    (48)3952-0900
+                  </a>
+                  <a className={styles.tel_whatsapp} href="tel:+5548998117717">
+                    (48)98405-9864
+                  </a>
                 </li>
               </ul>
             </div>
@@ -61,8 +65,12 @@ const Footer = () => {
             <div className={styles.telContato}>
               <ul>
                 <li>
-                  <a href="tel:+5548998117717">(48) 3952-0922</a>
-                  <a href="#">(48) 98405-9864</a>
+                  <a className={styles.tel_icon} href="tel:+5548998117717">
+                    (48) 3952-0922
+                  </a>
+                  <a className={styles.tel_whatsapp} href="#">
+                    (48) 98405-9864
+                  </a>
                 </li>
               </ul>
             </div>

@@ -17,6 +17,12 @@
     }
     ul {
       padding: 0;
+
+      @include breakpoint(md) {
+        display: flex;
+        flex-direction: row;
+        gap: 40px;
+      }
       li {
         list-style: none;
         margin: 0 0 10px;
@@ -100,8 +106,8 @@
 
     @include breakpoint(md) {
       flex-direction: row;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
+      display: flex;
+      justify-content: space-evenly;
     }
 
     .content_matriz,
@@ -165,6 +171,36 @@
           text-align: center;
           &:hover {
             color: $colorGray;
+          }
+        }
+
+        .tel_icon {
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: "";
+            background-image: url("../../assets/Icons/tel-icon.png");
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 5px;
+          }
+        }
+
+        .tel_whatsapp {
+          display: flex;
+          align-items: center;
+
+          &::before {
+            content: "";
+            background-image: url("../../assets/Icons/whatsapp-icon.png");
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            display: inline-block;
+            margin-right: 5px;
           }
         }
       }

@@ -1,0 +1,31 @@
+@import "../styles/variables.scss";
+
+.container_section {
+  padding: 7.75rem 1.5rem;
+
+  .content {
+    margin: 40px 0;
+  }
+  // VENDAS
+  .content_info {
+    button {
+      padding: 14px 30px;
+      border: 1px solid #007bff;
+      color: #007bff;
+      background: white;
+      border-radius: 30px;
+      font-size: 14px;
+      font-weight: 600;
+      line-height: 100%;
+      letter-spacing: 1px;
+      transition: 0.2s ease;
+      cursor: pointer;
+      width: 100%;
+      gap: 10px;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      margin-bottom: 15px;
+    }
+  }
+}

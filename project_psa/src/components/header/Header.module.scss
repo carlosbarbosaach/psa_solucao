@@ -1,12 +1,21 @@
 @import "../../styles/variables.scss";
 
 .header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background: $colorGray;
   height: $headerHeight;
   padding: 0 1.5rem;
   width: 100%;
   transition: 0.3s ease all;
   border-bottom: 5px solid $colorOrange;
+  z-index: 2;
   @include breakpoint(md) {
     padding: 0 3rem;
   }
@@ -133,5 +142,29 @@
     @include breakpoint(md) {
       display: none;
     }
+  }
+}
+
+.modal {
+  &-content {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  &-overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
   }
 }

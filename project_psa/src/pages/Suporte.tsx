@@ -1,8 +1,16 @@
+import Breadcrumb from "../components/Breadcrumb/Breadcrumb";
+import styles from "./Pages.module.scss";
+
 const Suporte = () => {
   return (
-    <div>
-      <h1>Suporte Aqui</h1>
-    </div>
+    <>
+      <section className={styles.container_section}>
+        <div className={styles.content}>
+          <Breadcrumb />
+          <h1>Suporte</h1>
+        </div>
+      </section>
+    </>
   );
 };
 

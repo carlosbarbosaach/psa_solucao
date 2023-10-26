@@ -10,6 +10,7 @@ import Contato from "./pages/Contato";
 import Home from "./pages/home/Home";
 import Suporte from "./pages/Suporte";
 import Whatsapp from "./components/whatsapp/Whatsapp";
+import ServidorOrcamento from "./pages/orcamento/ServidorOrcamento";
 
 const App = () => {
   return (
@@ -43,6 +44,9 @@ const App = () => {
         </Routes>
         <Routes>
           <Route path="/suporte" element={<Suporte />} />
+        </Routes>
+        <Routes>
+          <Route path="/servidor-orcamento" element={<ServidorOrcamento />} />
         </Routes>
       </main>
     </BrowserRouter>
